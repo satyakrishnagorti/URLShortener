@@ -39,8 +39,8 @@ def convert_code(code):
 
 if __name__ == '__main__':
 
+  #generating random strings as urls to test.
   for i in range(100):
-  #url = str(raw_input("Long URL:"))
     url = ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(10))
     print url
     count = i
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
   short_url=str(raw_input("Short URL:"))
   code = short_url.rstrip().split('/')[-1]
-
   count = convert_code(code)
+
   print "calculated count:",count
   print "Long URL:"+myhash[count]
